@@ -1,0 +1,10 @@
+
+: Properties 줄임말
+-> Child component 에 넘겨 줄 수 있는 데이터
+
+[Props의 형태]
+    key : value
+
+
+조건부 랜더링
+important=true 

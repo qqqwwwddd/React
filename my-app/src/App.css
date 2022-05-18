@@ -42,3 +42,25 @@
   height: 100px;
   background-color: gold;
 }
+
+.header-dark {
+  background-color: black;
+  color: aliceblue;
+}
+
+.article-dark {
+  background-color: black;
+  color: aliceblue;
+}
+
+
+.header_light {
+
+  background-color: pink;
+  color: black
+}
+
+.article_light {
+  background-color: pink;
+  color: black
+}

@@ -35,7 +35,10 @@ function Usestate2() {
             <input type="text" onChange={inputValueChange} value={input} ></input>
             <button onClick={inputValueRecord}>Record!</button>
             {names.map((name, idx) => {
-                return <p key={idx}>{name}</p>;
+                return <p key={idx}>{name}</p>; 
+                // return <p>{name}</p>;
+
+                // 조건 비교 : filter(Obj)
             })}
         </div>
     )

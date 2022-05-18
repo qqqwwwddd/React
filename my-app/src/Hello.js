@@ -24,6 +24,7 @@ function Hello({name, color, important}) {
             <div style={{
                     color
             }}>
+                {/*  조건부 렌더링  */}
                 {/* {important ? '!!' : null} */}
                 {important && '!!'}
                 Hello, {name}              

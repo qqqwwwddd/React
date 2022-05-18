@@ -19,5 +19,8 @@ snake_case : 언더바로 연결
 kebab-case : 하이픈 연결
 PascalCase : 대문자 + 대문자 -> 함수의 이름 만들 때
 
+5. 조건부 렌더링
+{&&} {or} 사용 가능 
+
 
 

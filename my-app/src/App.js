@@ -16,19 +16,18 @@ import News from './News';
 import {UseContext1} from './UseContext1';
 
 
-const DarkMode = {
-  color: 'white',
-  bgColor: 'black',
-  containerColor: 'black'
-}
-
 function App() {
   // const [work, setWork] = useState(false);
-
+  const [mode, setMode] = useState(true);
   const [company, setCompany] = useState("더존");
   return (
-    <div className='App'>
-    
+    <div className='App'
+      style= {{
+        color : mode? "black" : "white",
+        background : mode? "pink" : "black",  
+        width: '100vw',
+        height: '100vh'
+      }}>
   
       {/* <View>
      
@@ -74,7 +73,7 @@ function App() {
       
       </News> */}
       
-      <UseContext1.Provider value={{company, setCompany}}>
+      <UseContext1.Provider value={{company, setCompany, mode, setMode}}>
         <News></News>
       </UseContext1.Provider>
 

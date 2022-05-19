@@ -14,6 +14,14 @@ import UseRef2 from './UseRef2';
 import UseRef3 from './UseRef3';
 import News from './News';
 import {UseContext1} from './UseContext1';
+import Parent from './Parent';
+import UseMemo1 from './UseMemo1';
+import UseMemo2 from './UseMemo2';
+import UseCallback1 from './UseCallback1';
+import UseCallback2 from './UseCallback2';
+import Item from './Item';
+import UseReducer1 from './UseReducer1';
+import UseReducer2 from './UseReducer2';
 
 
 function App() {
@@ -22,12 +30,13 @@ function App() {
   const [company, setCompany] = useState("더존");
   return (
     <div className='App'
-      style= {{
-        color : mode? "black" : "white",
-        background : mode? "pink" : "black",  
-        width: '100vw',
-        height: '100vh'
-      }}>
+      // style= {{
+      //   color : mode? "black" : "white",
+      //   background : mode? "pink" : "black",  
+      //   width: '100vw',
+      //   height: '100vh'
+      // }}
+      >
   
       {/* <View>
      
@@ -44,6 +53,8 @@ function App() {
       {/* <Parent>
        <Child></Child>
      </Parent> */}
+
+     {/* <Parent></Parent> */}
 
       {/* <Usestate1 /> */}
       {/* <Usestate2 /> */}
@@ -73,9 +84,24 @@ function App() {
       
       </News> */}
       
-      <UseContext1.Provider value={{company, setCompany, mode, setMode}}>
+      {/* <UseContext1.Provider value={{company, setCompany, mode, setMode}}>
         <News></News>
-      </UseContext1.Provider>
+      </UseContext1.Provider> */}
+
+      {/* UseMemo */}
+      {/* <UseMemo1></UseMemo1> */}
+      {/* <UseMemo2></UseMemo2> */}
+
+      {/* <UseCallback1></UseCallback1> */}
+
+    {/* < UseCallback2></UseCallback2> */}
+      
+
+      {/* <Item></Item> */}
+
+      <UseReducer1></UseReducer1>
+
+      <UseReducer2></UseReducer2>
 
     </div>
   );

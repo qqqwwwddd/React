@@ -14,6 +14,7 @@ function UseRef1() {
     //useRef : 내부적으로는 실행되지만 랜더링은 일어나지 않는다
     const refNumber = useRef(0);
     // console.log(refNumber.current);
+    console.log(refNumber.current);
     const updateRefNumber = () =>{
         refNumber.current = refNumber.current + 1;
         console.log(refNumber.current);

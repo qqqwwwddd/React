@@ -1,13 +1,30 @@
-import React, { useCallback, useEffect, useReducer, useState } from "react";
+import React, { useCallback, useEffect, useReducer, useRef, useState } from "react";
 import List from "./List";
 
-const ACTION_TYPES = {
-    add: "add",
-    del: "del"
-}
+
 
 const reducer = (state, action) => {
-   
+    // console.log("--reducer 동작 확인");  
+    console.log("--state,action확인--",state,action);
+    // console.log(action.id.currentId);
+    switch(action.type) {
+        case "add-list":
+        // console.log(state);
+        // const name = action.name.list;
+        const newList = {
+            id: action.id.currentId += 1,   // +1 해야 키중복 안됨
+            name: action.name.list,
+            confirmed: true 
+        };
+        return {
+            count: state.count + 1,
+            lists: [...state.lists, newList]
+        };  
+        default:
+
+        return state; // default -> 값이 변화가 없으면 마지막 상태 유지  
+    
+    }  
 }
 
 const initialList = {
@@ -22,22 +39,42 @@ const initialList = {
 }
 
 function UseReducer2() {
-    const [list, setList] = useState("");
-    const [finalList, dispatch] = useReducer(reducer, initialList); 
 
+    const [list, setList] = useState("");
+    
+    const currentId = useRef(1);  
+    
+    const [finalList, dispatch] = useReducer(reducer, initialList); 
+    
+    // console.log(finalList);
+    // console.log(list);
     return(
         <div>
             <h2>물품 리스트</h2>
-            <p>총 물품수 : ? 개</p>
+            <p>총 물품수 : {finalList.count}개</p>
+           
             <input 
                 type="text"
                 placeholder="물품을 입력하세요"
                 onChange={(e) => setList(e.target.value)}>
             </input>
-            <button onClick={() => {
-                dispatch({type: ACTION_TYPES.add   })
+
+            <button onClick={ () => {
+                // dispatch 작동하면 reducer한테 값 넘겨줌 
+                dispatch({type: "add-list", id: {currentId}, name: {list}}); 
+
             }}>추가</button>
-            <List></List>
+            
+            {finalList.lists.map((list) => {
+                // console.log(list.id); // Object
+                
+                // return <p key={list.id}>{list.name}<button>삭제</button></p>; 
+                return <List 
+                        key={list.id}
+                        name={list.name}
+                        ></List>
+            
+            })}
         </div>
     )
 }

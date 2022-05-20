@@ -22,6 +22,7 @@ import UseCallback2 from './UseCallback2';
 import Item from './Item';
 import UseReducer1 from './UseReducer1';
 import UseReducer2 from './UseReducer2';
+import UseState1 from './UseState1';
 
 
 function App() {
@@ -56,8 +57,8 @@ function App() {
 
      {/* <Parent></Parent> */}
 
-      {/* <Usestate1 /> */}
-      {/* <Usestate2 /> */}
+      {/* <UseState1 /> */}
+      {/* <UseState2 /> */}
       {/* <UseEffect1 /> */}
       {/* 조건부 랜더링 */}
       {/* && / || */}
@@ -99,7 +100,7 @@ function App() {
 
       {/* <Item></Item> */}
 
-      <UseReducer1></UseReducer1>
+      {/* <UseReducer1></UseReducer1> */}
 
       <UseReducer2></UseReducer2>
 

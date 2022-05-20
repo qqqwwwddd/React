@@ -1,0 +1,18 @@
+WebStorage
+- local / session
+
+- localStorage  
+    k : v, 문자열로 저장
+    JSON 기능으로 객체로 바꿔 사용 
+
+- 사용
+window.localStorage.
+
+    기능 
+    - setItem(k , v)
+    - getItem(k)
+    - removeItem()
+    - clear() : 도메인 내 모든 내용 삭제
+    - length : 전체 아이템의 갯수
+    - key(idx) : key 반환 
+

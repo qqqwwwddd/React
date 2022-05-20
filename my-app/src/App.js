@@ -23,6 +23,7 @@ import Item from './Item';
 import UseReducer1 from './UseReducer1';
 import UseReducer2 from './UseReducer2';
 import UseState1 from './UseState1';
+import Storage from './Storage';
 
 
 function App() {
@@ -103,6 +104,8 @@ function App() {
       {/* <UseReducer1></UseReducer1> */}
 
       <UseReducer2></UseReducer2>
+
+      {/* <Storage></Storage>  */}
 
     </div>
   );

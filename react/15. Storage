@@ -14,5 +14,5 @@ window.localStorage.
     - removeItem()
     - clear() : 도메인 내 모든 내용 삭제
     - length : 전체 아이템의 갯수
-    - key(idx) : key 반환 
+    - key(idx) : 로컬스토리지의 인덱스 번호로 key값 반환 출력
 

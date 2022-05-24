@@ -15,16 +15,16 @@ function App() {
         <div>
             <ul>
                 <li>
-                    <Link to="/">Home</Link>
+                    <Link to='/'>Home</Link>
                 </li>
                 <li>
                     {/* NavLink 안에서는 함수!! */}
-                    <NavLink to="/" style={activeStyle}>
+                    <NavLink to='/' style={activeStyle}>
                         Home
                     </NavLink>
                 </li>
                 <li>
-                    <Link to="/projects">Projects</Link>
+                    <Link to='/projects'>Projects</Link>
                 </li>
             </ul>
             <hr />

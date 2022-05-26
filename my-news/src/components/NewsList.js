@@ -27,22 +27,29 @@ function NewsList({ category, categoryValue }) {
     console.log(category);
     const [articles, setArticles] = useState([]);
     // useEffect 는 한번만 실행됨 렌더링 안됨 Effect에 category?
-    useEffect(() => {
-        const getData = async () => {
-            try {
-                const queryString =
-                    categoryValue === "" ? "" : `&category=${categoryValue}`;
-                const response = await axios.get(
-                    `https://newsapi.org/v2/top-headlines?country=kr&apiKey=9e3d36b809b04596b6beb919ba85d2f3${queryString}`
-                );
-                console.log(response.data);
-                setArticles(response.data.articles);
-            } catch (error) {
-                console.log(error);
-            }
-        };
-        getData();
-    }, [category]);
+    useEffect(
+        () => {
+            const getData = async () => {
+                try {
+                    const queryString =
+                        categoryValue === "all" || !categoryValue
+                            ? ""
+                            : `&category=${categoryValue}`;
+                    console.log(queryString);
+                    const response = await axios.get(
+                        `https://newsapi.org/v2/top-headlines?country=kr&apiKey=f1c7358cbf754e8eb806c975c10a7722${queryString}`
+                    );
+                    console.log(response.data);
+                    setArticles(response.data.articles);
+                } catch (error) {
+                    console.log(error);
+                }
+            };
+            getData();
+        },
+        [category],
+        [categoryValue]
+    );
     return (
         <NewsItemBlock>
             {/* <NewsItem article={sample}></NewsItem>

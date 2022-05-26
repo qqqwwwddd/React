@@ -79,19 +79,18 @@ function Categories({ setCategory }) {
     // getCategoryData().then((data) => console.log(data));
     return (
         <CategoriesBlock>
-            {categories.map((category) => {
+            {categories.map((category) => (
                 // if (category.name === "all") {
                 //     category.name = "";
                 // }
-                return (
-                    <Category
-                        key={category.name}
-                        onClick={() => setCategory(category.name)}
-                    >
-                        <Link to={`/${category.name}`}>{category.text}</Link>
-                    </Category>
-                );
-            })}
+                // return
+                <Category
+                    key={category.name}
+                    onClick={() => setCategory(category.name)}
+                >
+                    <Link to={`/${category.name}`}>{category.text}</Link>
+                </Category>
+            ))}
         </CategoriesBlock>
     );
 }

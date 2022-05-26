@@ -13,7 +13,6 @@ root.render(
     <BrowserRouter>
         <Routes>
             <Route path="/" element={<App />}></Route>
-            <Route path="/:categoryValue" element={<App />}></Route>
         </Routes>
     </BrowserRouter>
 );

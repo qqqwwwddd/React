@@ -23,7 +23,7 @@ const NewsItemBlock = styled.div`
 //     urlToImage: "https://via.placeholder.com/160",
 // };
 
-function NewsList({ category }) {
+function NewsList({ category, categoryValue }) {
     console.log(category);
     const [articles, setArticles] = useState([]);
     // useEffect 는 한번만 실행됨 렌더링 안됨 Effect에 category?
@@ -31,10 +31,9 @@ function NewsList({ category }) {
         const getData = async () => {
             try {
                 const queryString =
-                    category === "" ? "" : `&category=${category}`;
-
+                    categoryValue === "" ? "" : `&category=${categoryValue}`;
                 const response = await axios.get(
-                    `https://newsapi.org/v2/top-headlines?country=kr&apiKey=bc51f2b5411d4cee80544a3261024959${queryString}`
+                    `https://newsapi.org/v2/top-headlines?country=kr&apiKey=9e3d36b809b04596b6beb919ba85d2f3${queryString}`
                 );
                 console.log(response.data);
                 setArticles(response.data.articles);

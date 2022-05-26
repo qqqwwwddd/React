@@ -5,8 +5,11 @@ import NewsItem from "./components/NewsItem";
 import NewsList from "./components/NewsList";
 import Categories from "./components/Categories";
 import { useCallback, useState } from "react";
+import { useParams } from "react-router-dom";
 
 function App() {
+    const { categoryValue } = useParams();
+    console.log("카테고리벨류: ", categoryValue);
     const [category, setCategory] = useState("");
     const selectCategory = useCallback((category) => {
         setCategory(category);
@@ -30,11 +33,15 @@ function App() {
     return (
         <>
             <Categories
-                category={category}
+                // category={category}
+                category={categoryValue}
                 setCategory={setCategory}
                 onClick={selectCategory}
             ></Categories>
-            <NewsList category={category}></NewsList>
+            <NewsList
+                category={category}
+                categoryValue={categoryValue}
+            ></NewsList>
         </>
     );
 }

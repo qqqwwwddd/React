@@ -16,7 +16,7 @@ function UseCallback1() {
     const showNumber = useCallback(() => {
         console.log(`showNumber : number ${number}`);
         return;
-    },[number]); 
+    }, [number]);
 
     // useEffect(() => {
     //     console.log("showNumber가 변경되었습니다");
@@ -24,23 +24,24 @@ function UseCallback1() {
 
     useEffect(() => {
         console.log("showNumber가 변경되었습니다");
-    },[showNumber]);
+    }, [showNumber]);
 
     const [toggle, setToggle] = useState(true);
 
-    return(
+    return (
         <div>
-            <input 
-                type="number"
+            <input
+                type='number'
                 value={number}
-                onChange={(e) => setNumber(e.target.value)}>
-            </input>
+                onChange={(e) => setNumber(e.target.value)}
+            ></input>
             <br />
             <button onClick={showNumber}>Show Number</button>
             <br />
-            <button onClick={() => setToggle(!toggle) }>{toggle.toString()}</button>
+            <button onClick={() => setToggle(!toggle)}>
+                {toggle.toString()}
+            </button>
         </div>
-    )
-
-    }
+    );
+}
 export default UseCallback1;

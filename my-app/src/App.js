@@ -36,7 +36,7 @@ function App() {
     const [company, setCompany] = useState("더존");
     return (
         <div
-            className='App'
+            className="App"
             // style= {{
             //   color : mode? "black" : "white",
             //   background : mode? "pink" : "black",
@@ -106,7 +106,7 @@ function App() {
 
             {/* <UseReducer1></UseReducer1> */}
 
-            {/* <UseReducer2></UseReducer2> */}
+            <UseReducer2></UseReducer2>
 
             {/* <Storage></Storage>  */}
 
@@ -117,7 +117,7 @@ function App() {
             {/* <StyledComponent></StyledComponent> */}
 
             {/* <Async></Async> */}
-            <Async2></Async2>
+            {/* <Async2></Async2> */}
         </div>
     );
 }

@@ -17,11 +17,11 @@ import { UseContext1 } from "./UseContext1";
 import Parent from "./Parent";
 import UseMemo1 from "./UseMemo1";
 import UseMemo2 from "./UseMemo2";
-import UseCallback1 from "./UseCallback1";
-import UseCallback2 from "./UseCallback2";
+// import UseCallback1 from "./UseCallback1";
+// import UseCallback2 from "./UseCallback2";
 import Item from "./Item";
 import UseReducer1 from "./UseReducer1";
-import UseReducer2 from "./UseReducer2";
+// import UseReducer2 from "./UseReducer2";
 import UseState1 from "./UseState1";
 import Storage from "./Storage";
 import Inputs from "./components/Inputs";
@@ -29,6 +29,7 @@ import CSSModule from "./components/CSSModule";
 import StyledComponent from "./components/StyledComponent";
 import Async from "./components/Async";
 import Async2 from "./components/Async2";
+import Test from "./components/Test";
 
 function App() {
     // const [work, setWork] = useState(false);
@@ -106,7 +107,7 @@ function App() {
 
             {/* <UseReducer1></UseReducer1> */}
 
-            <UseReducer2></UseReducer2>
+            {/* <UseReducer2></UseReducer2> */}
 
             {/* <Storage></Storage>  */}
 
@@ -118,6 +119,8 @@ function App() {
 
             {/* <Async></Async> */}
             {/* <Async2></Async2> */}
+
+            <Test></Test>
         </div>
     );
 }

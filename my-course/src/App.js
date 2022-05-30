@@ -21,7 +21,7 @@ function App() {
                     </Route>
                     {/*  */}
                     <Route path="/wishlist" element={<WishlistPage />} />
-                    <Route path="*" element={<NotFoundPage />} />
+                    <Route path="/*" element={<NotFoundPage />} />
                 </Route>
             </Routes>
         </BrowserRouter>

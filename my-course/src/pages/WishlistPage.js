@@ -12,9 +12,10 @@ function WishlistPage() {
     const [courses, setCourses] = useState([]);
 
     //
-    const handleDelete = () => {
-        // deleteWishlist();
+    const handleDelete = ({ course }) => {
+        deleteWishlist(course.slug);
         const nextCourses = getWishlist();
+        console.log(nextCourses);
         setCourses(nextCourses);
     };
 
@@ -36,8 +37,9 @@ function WishlistPage() {
                     />
                     <div className={styles.link}>
                         {/*  */}
-
-                        <Button as="div">Move to Courses Page</Button>
+                        <Link to="/courses">
+                            <Button as="div">Move to Courses Page</Button>
+                        </Link>
                     </div>
                 </>
             ) : (
@@ -50,7 +52,7 @@ function WishlistPage() {
                                 src={closeButton}
                                 alt="close"
                                 //
-                                onClick={handleDelete(course.slug)}
+                                onClick={() => handleDelete({ course })}
                             />
                         </li>
                     ))}

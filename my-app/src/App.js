@@ -30,6 +30,7 @@ import StyledComponent from "./components/StyledComponent";
 import Async from "./components/Async";
 import Async2 from "./components/Async2";
 import Test from "./components/Test";
+import Dept from "./components/dept";
 
 function App() {
     // const [work, setWork] = useState(false);
@@ -120,7 +121,8 @@ function App() {
             {/* <Async></Async> */}
             {/* <Async2></Async2> */}
 
-            <Test></Test>
+            {/* <Test></Test> */}
+            <Dept />
         </div>
     );
 }

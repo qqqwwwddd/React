@@ -51,6 +51,8 @@ function Insert() {
             >
                 등록
             </button>
+            <br />
+            <div> {data != null ? JSON.stringify(data) : null}</div>
         </div>
     );
 }

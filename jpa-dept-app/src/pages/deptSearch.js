@@ -35,8 +35,10 @@ function Search() {
             <div>
                 {data && (
                     <div>
-                        deptno : {data.deptno} dname : {data.dname} loc :
-                        {` ${data.loc}`}
+                        deptno : {data.deptno}
+                        <br />
+                        dname : {data.dname} <br />
+                        loc :{` ${data.loc}`}
                     </div>
                 )}
             </div>

@@ -12,17 +12,21 @@ import EmpSearch from "./pages/empSearch";
 import EmpInsert from "./pages/empInsert";
 import EmpUpdate from "./pages/empUpdate";
 import EmpDelete from "./pages/empDelete";
+import AllDept from "./pages/deptAll";
+import AllEmp from "./pages/empAll";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
     <BrowserRouter>
         <Routes>
             <Route path="/" element={<App />}>
+                <Route path="/d_all" element={<AllDept />} />
                 <Route path="/d_find" element={<Search />} />
                 <Route path="/d_add" element={<Insert />} />
                 <Route path="/d_up" element={<Update />} />
                 <Route path="/d_del" element={<Delete />} />
 
+                <Route path="/e_all" element={<AllEmp />} />
                 <Route path="/e_find" element={<EmpSearch />} />
                 <Route path="/e_add" element={<EmpInsert />} />
                 <Route path="/e_up" element={<EmpUpdate />} />

@@ -13,7 +13,7 @@ function Search() {
     const [data, setData] = useState();
     console.log(data && data.deptno);
     return (
-        <div>
+        <div className="input">
             <h2>Dept 조회</h2>
             <input
                 type="text"

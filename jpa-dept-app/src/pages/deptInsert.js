@@ -16,8 +16,7 @@ const addDept = (deptno, dname, loc, setData) => {
 function Insert() {
     const [data, setData] = useState();
     return (
-        <div className="container">
-            <br />
+        <div>
             <div className="input">
                 <h2>Dept 등록</h2>
                 <table>

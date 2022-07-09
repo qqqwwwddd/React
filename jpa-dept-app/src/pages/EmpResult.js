@@ -1,7 +1,7 @@
 export const EmpResult = ({ data }) => {
     return (
         <div className="result">
-            <h2>결과</h2>
+            <h2>ALL EMP</h2>
             <table border={1}>
                 <thead>
                     <tr>

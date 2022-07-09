@@ -1,7 +1,7 @@
 export const DeptResult = ({ data }) => {
     return (
         <div className="result">
-            <h2>결과</h2>
+            <h2>ALL DEPT</h2>
             <table border={1}>
                 <thead>
                     <tr>

@@ -1,13 +1,21 @@
 import logo from "./logo.svg";
 import "./App.css";
-import { Link, Outlet } from "react-router-dom";
+import { Link, NavLink, Outlet } from "react-router-dom";
 
+const navLink = {
+    backgroud: "white",
+    color: "salmon",
+    fontSize: 30,
+    fontWeight: "bold",
+};
 function App() {
     return (
         <div>
             <div className="header">
                 <div className="deptHeader">
-                    <h1>DEPT</h1>
+                    <NavLink to="/d_all" style={navLink} active>
+                        <div> DEPT</div>
+                    </NavLink>
                     <Link to="/d_find">
                         <button> 부서 검색</button>
                     </Link>
@@ -22,7 +30,9 @@ function App() {
                     </Link>
                 </div>
                 <div className="empHeader">
-                    <h1>EMP</h1>
+                    <NavLink to="/e_all" style={navLink}>
+                        <div> EMP</div>
+                    </NavLink>
                     <Link to="/e_find">
                         <button> 사원 검색 </button>
                     </Link>

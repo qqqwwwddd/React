@@ -66,7 +66,6 @@ function Update() {
                 </button>
                 <br />
             </div>
-            {data && <DeptResult data={data} />}
         </div>
     );
 }

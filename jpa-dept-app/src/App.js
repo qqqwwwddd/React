@@ -4,23 +4,23 @@ import { Link, NavLink, Outlet } from "react-router-dom";
 
 const navLink = {
     backgroud: "white",
-    color: "salmon",
+    color: "skyblue",
     fontSize: 30,
     fontWeight: "bold",
 };
 function App() {
     return (
         <div>
-            <div className="header">
+            <div>
                 <div className="deptHeader">
-                    <NavLink to="/d_all" style={navLink} active>
+                    <NavLink to="/d_all" style={navLink}>
                         <div> DEPT</div>
                     </NavLink>
                     <Link to="/d_find">
-                        <button> 부서 검색</button>
+                        <span className="header"> 부서 검색</span>
                     </Link>
                     <Link to="/d_add">
-                        <button>부서 등록</button>
+                        <span>부서 등록</span>
                     </Link>
                     <Link to="d_up">
                         <button>부서 수정</button>

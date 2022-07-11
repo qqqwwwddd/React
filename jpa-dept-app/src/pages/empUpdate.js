@@ -30,14 +30,6 @@ const updateEmp = (
     });
 };
 function EmpUpdate() {
-    // const [empno, setEmpno] = useState();
-    // const [ename, setEname] = useState();
-    // const [job, setJob] = useState();
-    // const [mgr, setMgr] = useState();
-    // const [hiredate, setHiredate] = useState();
-    // const [sal, setSal] = useState();
-    // const [comm, setComm] = useState();
-    // const [dept, setDept] = useState();
     const [data, setData] = useState();
 
     return (
@@ -52,9 +44,6 @@ function EmpUpdate() {
                                 type="text"
                                 id="empno"
                                 placeholder="사원번호를 입력하세요"
-                                // onChange={(e) => {
-                                //     setEmpno(e.target.value);
-                                // }}
                             />
                         </td>
                     </tr>
@@ -65,9 +54,6 @@ function EmpUpdate() {
                                 type="text"
                                 id="ename"
                                 placeholder="사원이름을 입력하세요"
-                                // onChange={(e) => {
-                                //     setEname(e.target.value);
-                                // }}
                             />
                         </td>
                     </tr>
@@ -78,9 +64,6 @@ function EmpUpdate() {
                                 type="text"
                                 id="job"
                                 placeholder="직무를 입력하세요"
-                                // onChange={(e) => {
-                                //     setJob(e.target.value);
-                                // }}
                             />
                         </td>
                     </tr>
@@ -91,9 +74,6 @@ function EmpUpdate() {
                                 type="text"
                                 id="mgr"
                                 placeholder="매니저번호를 입력하세요"
-                                // onChange={(e) => {
-                                //     setMgr(e.target.value);
-                                // }}
                             />
                         </td>
                     </tr>
@@ -104,9 +84,6 @@ function EmpUpdate() {
                                 type="text"
                                 id="hiredate"
                                 placeholder="입사일을 입력하세요"
-                                // onChange={(e) => {
-                                //     setHiredate(e.target.value);
-                                // }}
                             />
                         </td>
                     </tr>
@@ -117,9 +94,6 @@ function EmpUpdate() {
                                 type="text"
                                 id="sal"
                                 placeholder="연봉을 입력하세요"
-                                // onChange={(e) => {
-                                //     setSal(e.target.value);
-                                // }}
                             />
                         </td>
                     </tr>
@@ -130,9 +104,6 @@ function EmpUpdate() {
                                 type="text"
                                 id="comm"
                                 placeholder="커미션을 입력하세요"
-                                // onChange={(e) => {
-                                //     setComm(e.target.value);
-                                // }}
                             />
                         </td>
                     </tr>
@@ -143,9 +114,6 @@ function EmpUpdate() {
                                 type="text"
                                 id="dept"
                                 placeholder="부서정보를 입력하세요"
-                                // onChange={(e) => {
-                                //     setDept(e.target.value);
-                                // }}
                             />
                         </td>
                     </tr>

@@ -8,3 +8,35 @@
     /* margin-top: ; */
     float: inline-start;
 }
+
+.pagination {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    padding: 5px;
+}
+
+.page_item {
+    padding: 5px;
+    font-size: 15px;
+    color: aliceblue;
+    border: solid 1px skyblue;
+    background-color: skyblue;
+}
+
+.page_item:hover {
+    cursor: pointer;
+}
+
+.page_items {
+    padding: 5px;
+    font-size: 15px;
+    color: skyblue;
+    border: solid 1px skyblue;
+}
+
+.page_items:hover {
+    cursor: pointer;
+    color: navy;
+    background-color: aliceblue;
+}

@@ -1,4 +1,7 @@
-export const EmpResult = ({ data }) => {
+import { Link } from "react-router-dom";
+
+export const EmpResult = ({ data, page, setPage }) => {
+    console.log(page);
     return (
         <div className="result">
             <h2>ALL EMP</h2>
@@ -17,7 +20,7 @@ export const EmpResult = ({ data }) => {
                 </thead>
                 <tbody>
                     {data &&
-                        data.map((emp) => {
+                        data.dtoList.map((emp) => {
                             return (
                                 <tr key={emp.empno}>
                                     <td>{emp.empno}</td>
@@ -35,6 +38,41 @@ export const EmpResult = ({ data }) => {
                         })}
                 </tbody>
             </table>
+            <ul className="pagination">
+                <li className="page_item">
+                    <span onClick={() => setPage(page === 1 ? 1 : page - 1)}>
+                        Previous
+                    </span>
+                </li>
+                {data &&
+                    data.pageList.map((page) => (
+                        <li key={page} className="page_items">
+                            <span
+                                // key={page}
+                                id={page}
+                                onClick={(e) => {
+                                    setPage(parseInt(e.target.id));
+                                }}
+                            >
+                                {page}
+                            </span>
+                        </li>
+                    ))}
+
+                <li className="page_item">
+                    <span
+                        onClick={() =>
+                            setPage(
+                                page === data.pageList.length
+                                    ? data.pageList.length
+                                    : page + 1
+                            )
+                        }
+                    >
+                        Next
+                    </span>
+                </li>
+            </ul>
         </div>
     );
 };
